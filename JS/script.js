@@ -13,3 +13,26 @@ document.querySelectorAll("nav a").forEach(link => {
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
+// Array of images
+const images = [
+    "Images/orange.jpeg",
+    "Images/blue.jpeg"
+];
+
+let currentIndex = 0;
+const galleryImg = document.getElementById("galleryImage");
+
+// Function to change image
+function changeImage() {
+    currentIndex++;
+
+    // Loop back using condition
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    galleryImg.src = images[currentIndex];
+}
+
+// Change image every 3 seconds (setInterval)
+setInterval(changeImage, 3000);
