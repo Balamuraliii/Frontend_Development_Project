@@ -13,6 +13,8 @@ document.querySelectorAll("nav a").forEach(link => {
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
+// ================== ARRAY + DOM MANIPULATION ==================
+
 // Array of images
 const images = [
     "Images/orange.jpeg",
